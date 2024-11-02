@@ -6,6 +6,7 @@ import BoardReopenedHandler from '@/services/event-source/boards/handlers/BoardR
 
 export default {
   create () {
+    console.log('Message reçu:')
     return EventSource.create('https://cqrs-event-sourcing-example.com/boards', [
       BoardCreatedHandler,
       BoardClosedHandler,
